@@ -17,7 +17,7 @@ func main() {
 	address := os.Getenv("ADDRESS")
 
 	if len(address) == 0 {
-		fmt.Printf(usage())
+		fmt.Printf("%v\n", usage())
 		os.Exit(1)
 	}
 

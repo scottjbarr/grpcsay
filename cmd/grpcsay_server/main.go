@@ -29,7 +29,7 @@ func main() {
 	bind := os.Getenv("BIND")
 
 	if len(bind) == 0 {
-		fmt.Printf("Usage: BIND=:50051 bovine_server")
+		fmt.Printf("Usage: BIND=:50051 bovine_server\n")
 		os.Exit(1)
 	}
 
