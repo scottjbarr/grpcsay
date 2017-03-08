@@ -3,7 +3,7 @@
 A little demo for making a business logic (a service) available over GRPC
 and HTTP.
 
-Uses tiny Gophers for cuteness.
+Uses tiny Gophers for cuteness! \ʕ◔ϖ◔ʔ/
 
 
 ## Install grpc, protobuf etc
