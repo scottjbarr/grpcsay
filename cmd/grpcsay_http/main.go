@@ -17,7 +17,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	bind := os.Getenv("BIND")
 	if len(bind) == 0 {
-		fmt.Printf("Usage: BIND=:9000 bovine_http\n")
+		fmt.Printf("Usage: BIND=:9000 grpcsay_http\n")
 		os.Exit(1)
 	}
 
