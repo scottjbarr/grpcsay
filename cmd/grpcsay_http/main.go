@@ -20,6 +20,11 @@ func main() {
 		fmt.Printf("Usage: BIND=:9000 bovine_http\n")
 		os.Exit(1)
 	}
-	http.HandleFunc("/", handler)
-	http.ListenAndServe(bind, nil)
+
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", handler)
+
+	if err := http.ListenAndServe(bind, mux); err != nil {
+		panic(err)
+	}
 }
