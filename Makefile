@@ -6,6 +6,10 @@ APPS = grpcsay_server grpcsay_client grpcsay_http
 # Command to use when building for arbitrary target
 GO_BUILD = go build
 
+deps:
+	go get -u github.com/golang/protobuf/{proto,protoc-gen-go}
+	go get -u google.golang.org/grpc
+
 build: protoc
 	mkdir -p bin
 	$(foreach app,$(APPS), $(GO_BUILD) -o bin/$(app) cmd/$(app)/*.go &&) exit 0
